@@ -23,4 +23,6 @@ src_install() {
   chmod +x ${D}/opt/brogue-ce/bin/start_brogue.sh
   newicon bin/assets/icon.png brogue-ce.png
   make_desktop_entry /opt/brogue-ce/bin/start_brogue.sh "Brogue-CE" brogue-ce.png Game
+
+  dosym /opt/brogue-ce/bin/start_brogue.sh /usr/bin/brogue-ce
 }
