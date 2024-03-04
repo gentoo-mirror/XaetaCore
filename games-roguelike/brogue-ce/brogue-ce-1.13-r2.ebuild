@@ -14,15 +14,17 @@ DEPEND="sys-devel/gcc sys-apps/diffutils media-libs/libsdl2 media-libs/sdl2-imag
 RDEPEND="${DEPEND}"
 BDEPEND="${DEPEND}"
 
+src_configure() {
+  sed -i -e "s/DATADIR\ \:=\ ./DATADIR\ \:=\ \/opt\/brogue-ce\/bin/g" config.mk
+}
+
 src_install() {
   mkdir -p ${D}/opt/brogue-ce || die "Failed to make opt dir"
   cp -R "${S}/bin/" "${D}/opt/brogue-ce" || die "Install failed!"
-
+  cp -R "${S}/linux/brogue-multiuser.sh" "${D}/opt/brogue-ce/bin" || die "Install failed!"
+ sed -i -e "s/\/opt\/brogue/\/opt\/brogue-ce\/bin/g" ${D}/opt/brogue-ce/bin/brogue-multiuser.sh
   # Install desktop file and install start script
-  echo -e "#! /bin/bash\ncd /opt/brogue-ce/bin/\n./brogue" > ${D}/opt/brogue-ce/bin/start_brogue.sh
-  chmod +x ${D}/opt/brogue-ce/bin/start_brogue.sh
   newicon bin/assets/icon.png brogue-ce.png
-  make_desktop_entry /opt/brogue-ce/bin/start_brogue.sh "Brogue-CE" brogue-ce.png Game
-
-  dosym /opt/brogue-ce/bin/start_brogue.sh /usr/bin/brogue-ce
+  make_desktop_entry /opt/brogue-ce/bin/brogue-multiuser.sh "Brogue-CE" brogue-ce.png Game
+  dosym /opt/brogue-ce/bin/brogue-multiuser.sh /usr/bin/brogue-ce
 }
