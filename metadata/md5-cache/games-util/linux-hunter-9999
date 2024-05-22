@@ -1,0 +1,14 @@
+BDEPEND=sys-devel/gcc sys-libs/ncurses dev-build/make >=dev-vcs/git-1.8.2.1[curl]
+DEFINED_PHASES=install unpack
+DEPEND=sys-devel/gcc sys-libs/ncurses dev-build/make
+DESCRIPTION=Prototype MH:W companion app for Linux, inspired by SmartHunter.
+EAPI=8
+HOMEPAGE=https://github.com/Emanem/linux-hunter
+INHERIT=git-r3
+KEYWORDS=~amd64
+LICENSE=GPL-3.0
+PROPERTIES=live
+RDEPEND=sys-devel/gcc sys-libs/ncurses dev-build/make
+SLOT=0
+_eclasses_=git-r3	fbb2889c81f3a05910c1524db69425c1
+_md5_=941ee92d8704e032605e6d333b7c0694
