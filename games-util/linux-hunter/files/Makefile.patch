@@ -1,0 +1,17 @@
+diff --git a/Makefile b/Makefile
+index 7e9c0fb..32a3301 100644
+--- a/Makefile
++++ b/Makefile
+@@ -10,10 +10,11 @@ FLAGS=-g -Wall -std=c++11 -pthread -I/usr/include/ncursesw
+ LIBS=-lncursesw 
+ OBJS=$(OBJDIR)/wdisplay.o $(OBJDIR)/mhw_lookup.o $(OBJDIR)/main.o $(OBJDIR)/utils.o $(OBJDIR)/ui.o $(OBJDIR)/fdisplay.o $(OBJDIR)/memory.o $(OBJDIR)/patterns.o 
+ EXEC=linux-hunter
++LDFLAGS=-Wl,--copy-dt-needed-entries
+ DATE=$(shell date +"%Y-%m-%d")
+ 
+ $(EXEC) : $(OBJS)
+-	$(LINK) $(OBJS) -o $(EXEC) $(FLAGS) $(LIBS)
++	$(LINK) $(OBJS) -o $(EXEC) $(FLAGS) $(LDFLAGS) $(LIBS)
+ 
+ $(OBJDIR)/wdisplay.o: src/wdisplay.cpp src/wdisplay.h src/vbrush.h $(OBJDIR)/__setup_obj_dir
+ 	$(CPPC) $(FLAGS) src/wdisplay.cpp -c -o $@
