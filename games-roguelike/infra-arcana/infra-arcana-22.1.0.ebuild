@@ -15,15 +15,6 @@ RDEPEND="${DEPEND}"
 BDEPEND="${DEPEND}"
 
 src_configure() {
-  local mycmakeargs=(
-    -DCMAKE_INSTALL_PREFIX=/usr/local/
-  )
   cmake_src_configure
 }
-#src_install() {
-#
-#}
 
-#src_compile() {
-#  make ia
-#}
