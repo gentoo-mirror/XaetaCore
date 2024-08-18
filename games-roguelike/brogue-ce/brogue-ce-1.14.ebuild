@@ -13,6 +13,7 @@ KEYWORDS="amd64"
 DEPEND="sys-devel/gcc sys-apps/diffutils media-libs/libsdl2 media-libs/sdl2-image"
 RDEPEND="${DEPEND}"
 BDEPEND="${DEPEND}"
+RESTRICT="mirror"
 
 src_configure() {
   sed -i -e "s/DATADIR\ \:=\ ./DATADIR\ \:=\ \/opt\/brogue-ce\/bin/g" config.mk
