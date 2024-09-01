@@ -1,0 +1,16 @@
+BDEPEND=sys-devel/gcc sys-apps/diffutils gui? ( media-libs/libsdl2 media-libs/sdl2-image ) tui? ( sys-libs/ncurses )
+DEFINED_PHASES=compile install prepare
+DEPEND=sys-devel/gcc sys-apps/diffutils gui? ( media-libs/libsdl2 media-libs/sdl2-image ) tui? ( sys-libs/ncurses )
+DESCRIPTION=A community fork of the much-loved minimalist roguelike game
+EAPI=8
+HOMEPAGE=https://sites.google.com/site/broguegame
+INHERIT=desktop
+IUSE=tui +gui
+KEYWORDS=amd64
+LICENSE=AGPL-3.0
+RDEPEND=sys-devel/gcc sys-apps/diffutils gui? ( media-libs/libsdl2 media-libs/sdl2-image ) tui? ( sys-libs/ncurses )
+REQUIRED_USE=^^ ( tui gui )
+SLOT=0
+SRC_URI=https://github.com/tmewett/BrogueCE/archive/refs/tags/v1.14.1.tar.gz
+_eclasses_=desktop	021728fdc1b03b36357dbc89489e0f0d
+_md5_=c7fcca04de7e01aa49274928edb53b5e
