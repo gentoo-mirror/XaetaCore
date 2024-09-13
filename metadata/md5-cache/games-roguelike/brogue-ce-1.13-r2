@@ -10,5 +10,5 @@ LICENSE=AGPL-3.0
 RDEPEND=sys-devel/gcc sys-apps/diffutils media-libs/libsdl2 media-libs/sdl2-image
 SLOT=0
 SRC_URI=https://github.com/tmewett/BrogueCE/archive/refs/tags/v1.13.tar.gz
-_eclasses_=desktop	021728fdc1b03b36357dbc89489e0f0d
+_eclasses_=desktop	56973babb9c5f19cab0eeb53ece644c6
 _md5_=b15c2fab57c9711a62eec04af38d82f6
