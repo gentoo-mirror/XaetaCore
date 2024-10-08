@@ -12,5 +12,5 @@ RDEPEND=sys-devel/gcc sys-apps/diffutils gui? ( media-libs/libsdl2 media-libs/sd
 REQUIRED_USE=^^ ( tui gui )
 SLOT=0
 SRC_URI=https://github.com/tmewett/BrogueCE/archive/refs/tags/v1.14.1.tar.gz
-_eclasses_=desktop	56973babb9c5f19cab0eeb53ece644c6
+_eclasses_=desktop	3a72ffe0d8e1dd73af3a1c8c15a59fed
 _md5_=c7fcca04de7e01aa49274928edb53b5e

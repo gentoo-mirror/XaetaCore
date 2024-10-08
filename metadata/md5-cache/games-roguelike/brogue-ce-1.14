@@ -11,5 +11,5 @@ RDEPEND=sys-devel/gcc sys-apps/diffutils media-libs/libsdl2 media-libs/sdl2-imag
 RESTRICT=mirror
 SLOT=0
 SRC_URI=https://github.com/tmewett/BrogueCE/archive/refs/tags/v1.14.tar.gz
-_eclasses_=desktop	56973babb9c5f19cab0eeb53ece644c6
+_eclasses_=desktop	3a72ffe0d8e1dd73af3a1c8c15a59fed
 _md5_=609ef79b44e570c4280778ea3dce7263
