@@ -10,21 +10,27 @@ S="${WORKDIR}"
 LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~amd64"
-DEPEND=""
+DEPEND="    x11-libs/gtk+:3
+    x11-libs/libnotify
+    dev-libs/nss
+    x11-libs/libXtst
+    x11-misc/xdg-utils
+    app-accessibility/at-spi2-core
+    x11-libs/libdrm
+    media-libs/libgbm
+    x11-libs/libxcb
+    kde-cli-tools || kde-apps/kde-runtime || sys-apps/trash-cli || dev-libs/glib:2 || gnome-base/gvfs"
 RDEPEND="${DEPEND}"
 
 # Unpack the debian package
 src_unpack() {
+  unpack ${A}
+}
+
+src_install() {
   # Install extracted files
   cp -r "{$WORKDIR}/usr" "${D}"
 
   # Fix permissions
   chmod -R 755 "${D}/usr"
-}
-src_install() {
-  default
-  cmake_src_install
-  cp "${FILESDIR}/ia.sh" "${D}/usr/ia/ia.sh" || die "Install failed"
-  make_desktop_entry /usr/ia/ia.sh "Infra Arcana" Game
-  dosym /usr/ia/ia.sh /usr/bin/ia
 }
