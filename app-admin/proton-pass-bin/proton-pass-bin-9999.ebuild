@@ -17,7 +17,6 @@ DEPEND="x11-libs/gtk+:3
     x11-misc/xdg-utils
     app-accessibility/at-spi2-core
     x11-libs/libdrm
-    media-libs/libgbm
     x11-libs/libxcb
     kde-apps/kde-runtime
     sys-apps/trash-cli
