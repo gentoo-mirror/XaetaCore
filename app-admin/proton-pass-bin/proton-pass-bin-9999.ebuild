@@ -18,8 +18,7 @@ DEPEND="x11-libs/gtk+:3
     app-accessibility/at-spi2-core
     x11-libs/libdrm
     x11-libs/libxcb
-    dev-libs/glib:2
-    gnome-base/gvfs"
+    dev-libs/glib:2"
 RDEPEND="${DEPEND}"
 
 src_install() {
