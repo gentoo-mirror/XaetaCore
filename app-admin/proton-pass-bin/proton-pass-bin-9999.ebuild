@@ -10,7 +10,7 @@ S="${WORKDIR}"
 LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~amd64"
-DEPEND="    x11-libs/gtk+:3
+DEPEND="x11-libs/gtk+:3
     x11-libs/libnotify
     dev-libs/nss
     x11-libs/libXtst
