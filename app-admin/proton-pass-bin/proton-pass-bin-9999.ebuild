@@ -10,7 +10,7 @@ S="${WORKDIR}"
 LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~amd64"
-DEPEND="    x11-libs/gtk+:3
+DEPEND="x11-libs/gtk+:3
     x11-libs/libnotify
     dev-libs/nss
     x11-libs/libXtst
@@ -19,18 +19,22 @@ DEPEND="    x11-libs/gtk+:3
     x11-libs/libdrm
     media-libs/libgbm
     x11-libs/libxcb
-    kde-cli-tools || kde-apps/kde-runtime || sys-apps/trash-cli || dev-libs/glib:2 || gnome-base/gvfs"
+    kde-apps/kde-runtime
+    sys-apps/trash-cli
+    dev-libs/glib:2
+    gnome-base/gvfs"
 RDEPEND="${DEPEND}"
 
-# Unpack the debian package
-src_unpack() {
-  unpack ${A}
-}
-
 src_install() {
-  # Install extracted files
-  cp -r "{$WORKDIR}/usr" "${D}"
+  # We skip /usr/share/doc
+  insinto /usr
+  doins -r usr/bin
+  doins -r usr/lib
+  insinto /usr/share
+  doins -r usr/share/applications
+  doins -r usr/share/pixmaps
+  doins -r usr/share/lintian
 
   # Fix permissions
-  chmod -R 755 "${D}/usr"
+  fperms +x /usr/bin/proton-pass
 }
