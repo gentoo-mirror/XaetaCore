@@ -6,22 +6,21 @@ inherit desktop unpacker
 DESCRIPTION="ProtonPass Free password manager with identity protection"
 HOMEPAGE="https://proton.me/pass"
 SRC_URI="https://proton.me/download/PassDesktop/linux/x64/ProtonPass.deb"
-S=${WORKDIR}/proton-pass.ebuild
+S="${WORKDIR}"
 LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~amd64"
 DEPEND=""
 RDEPEND="${DEPEND}"
-BDEPEND="${DEPEND}"
 
+# Unpack the debian package
+src_unpack() {
+  # Install extracted files
+  cp -r "{$WORKDIR}/usr" "${D}"
 
-src_configure() {
-  local mycmakeargs=(
-  -DCMAKE_INSTALL_PREFIX="${EPREFIX}/usr"
-  )
-  cmake_src_configure
+  # Fix permissions
+  chmod -R 755 "${D}/usr"
 }
-
 src_install() {
   default
   cmake_src_install
