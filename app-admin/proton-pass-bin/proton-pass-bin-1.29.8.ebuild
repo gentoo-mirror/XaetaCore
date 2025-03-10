@@ -5,11 +5,11 @@ inherit desktop unpacker
 
 DESCRIPTION="ProtonPass Free password manager with identity protection"
 HOMEPAGE="https://proton.me/pass"
-SRC_URI="https://proton.me/download/PassDesktop/linux/x64/ProtonPass.deb"
+SRC_URI="https://proton.me/download/pass/linux/proton-pass_1.29.8_amd64.deb"
 S="${WORKDIR}"
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="~amd64"
+KEYWORDS="amd64"
 DEPEND="x11-libs/gtk+:3
     x11-libs/libnotify
     dev-libs/nss
