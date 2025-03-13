@@ -1,5 +1,6 @@
 # @Author : XaetaCore
 # Distributed under the terms of the GNU General Public License v2
+# Version list can be found at https://proton.me/download/PassDesktop/linux/x64/version.json
 EAPI=8
 inherit desktop unpacker
 
