@@ -2,4 +2,9 @@
 # Please add your descriptions to your package's metadata.xml ONLY.
 # * generated automatically using pmaint *
 
+games-emulation/emulationsstation-de:asan - Enable AddressSanitizer.
 games-emulation/emulationsstation-de:auto_updater - Enable built-in application updater feature.
+games-emulation/emulationsstation-de:debug - Create a debug build.
+games-emulation/emulationsstation-de:deinit - Deinit renderer,application window and audio when an emulator is launched.
+games-emulation/emulationsstation-de:profiling - Create a profiling build.
+games-emulation/emulationsstation-de:video_hw - Enable experimental ffmpeg video hardware decoding support.

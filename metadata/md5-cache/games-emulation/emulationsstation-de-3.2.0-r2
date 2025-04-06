@@ -5,11 +5,11 @@ DESCRIPTION=ES-DE is a frontend for browsing and launching games from your multi
 EAPI=8
 HOMEPAGE=https://gitlab.com/es-de/emulationstation-de
 INHERIT=cmake
-IUSE=-auto_updater
+IUSE=-auto_updater -deinit -debug -profiling -asan -video_hw
 KEYWORDS=amd64
 LICENSE=MIT
 RDEPEND=dev-build/cmake llvm-core/clang dev-vcs/git sys-devel/gettext media-libs/harfbuzz dev-libs/icu media-libs/libsdl2 media-video/ffmpeg:= media-libs/freeimage media-libs/freetype dev-libs/libgit2 net-misc/curl dev-libs/pugixml media-libs/alsa-lib net-wireless/bluez media-libs/mesa app-text/poppler[cxx]
 SLOT=0
 SRC_URI=https://gitlab.com/es-de/emulationstation-de/-/archive/v3.2.0/emulationstation-de-v3.2.0.tar.gz
 _eclasses_=toolchain-funcs	6afdb6107430c1832ca7e16aacbf8fa1	multilib	b2a329026f2e404e9e371097dda47f96	flag-o-matic	16d3941ed2dc39f4819368ae51bc0b72	multiprocessing	1e32df7deee68372153dca65f4a7c21f	ninja-utils	2df4e452cea39a9ec8fb543ce059f8d6	xdg-utils	42869b3c8d86a70ef3cf75165a395e09	cmake	c0c9c21d01b8a96d2d736c554daedc57
-_md5_=5a537ed1fce6d0af35a16b34341836da
+_md5_=1f6f7dde70816dd4dd745c422f48ca3b
