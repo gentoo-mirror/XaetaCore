@@ -10,7 +10,7 @@ S="${WORKDIR}/emulationstation-de-v3.2.0"
 LICENSE="MIT"
 SLOT="0"
 KEYWORDS="amd64"
-IUSE="-auto_updater"
+IUSE="-auto_updater -deinit -debug -profiling -asan -video_hw"
 DEPEND="
     dev-build/cmake
     llvm-core/clang
@@ -40,6 +40,16 @@ src_configure() {
   local mycmakeargs=()
   if ! use auto_updater; then
       mycmakeargs+=( -DAPPLICATION_UPDATER=off )
+  elif use deinit; then
+    mycmakeargs+=( -DDEINIT_ON_LAUNCH=on )
+  elif use debug; then
+    mycmakeargs+=( -DCMAKE_BUILD_TYPE=Debug )
+  elif use profiling; then
+    mycmakeargs+=( -DCMAKE_BUILD_TYPE=Profiling )
+  elif use asan; then
+    mycmakeargs+=( -DASAN=on )
+  elif use video_hw; then
+    mycmakeargs+=( -DVIDEO_HW_DECODING=on )
   fi
   
   cmake_src_configure
