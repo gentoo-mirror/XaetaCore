@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pkgmetadata>
+  <use>
+    <flag name="auto_updater">Enable built-in application updater feature.</flag>
+  </use>
+</pkgmetadata>
