@@ -10,6 +10,7 @@ S="${WORKDIR}/emulationstation-de-v3.2.0"
 LICENSE="MIT"
 SLOT="0"
 KEYWORDS="amd64"
+IUSE="-auto_updater"
 DEPEND="
     dev-build/cmake
     llvm-core/clang
@@ -36,5 +37,10 @@ src_prepare() {
 }
 
 src_configure() {
+  local mycmakeargs=()
+  if ! use auto_updater; then
+      mycmakeargs+=( -DAPPLICATION_UPDATER=off )
+  fi
+  
   cmake_src_configure
 }
