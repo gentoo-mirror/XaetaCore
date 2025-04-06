@@ -2,3 +2,4 @@
 # Please add your descriptions to your package's metadata.xml ONLY.
 # * generated automatically using pmaint *
 
+games-emulation/emulationsstation-de:auto_updater - Enable built-in application updater feature.
