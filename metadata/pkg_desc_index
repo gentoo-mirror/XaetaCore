@@ -1,4 +1,4 @@
-app-admin/proton-pass-bin 1.29.8 1.30.0 1.31.0 1.31.1: ProtonPass Free password manager with identity protection
+app-admin/proton-pass-bin 1.29.8 1.30.0 1.31.0 1.31.1 1.31.2: ProtonPass Free password manager with identity protection
 games-emulation/emulationsstation-de 3.2.0-r2: ES-DE is a frontend for browsing and launching games from your multi-platform collection.
 games-roguelike/brogue-ce 1.13-r2 1.14 1.14.1 1.14.1-r1 1.14.1-r2: A community fork of the much-loved minimalist roguelike game
 games-roguelike/infra-arcana 22.1.0: Infra Arcana is a Roguelike set in the early 20th century.
