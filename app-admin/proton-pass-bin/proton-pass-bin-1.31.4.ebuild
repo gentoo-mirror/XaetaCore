@@ -1,12 +1,11 @@
 # @Author : XaetaCore
 # Distributed under the terms of the GNU General Public License v2
-# Version list can be found at https://proton.me/download/PassDesktop/linux/x64/version.json
 EAPI=8
 inherit desktop unpacker
 
 DESCRIPTION="ProtonPass Free password manager with identity protection"
 HOMEPAGE="https://proton.me/pass"
-SRC_URI="https://proton.me/download/pass/linux/proton-pass_1.29.8_amd64.deb"
+SRC_URI="https://proton.me/download/pass/linux/proton-pass_1.31.4_amd64.deb"
 S="${WORKDIR}"
 LICENSE="GPL-3"
 SLOT="0"
