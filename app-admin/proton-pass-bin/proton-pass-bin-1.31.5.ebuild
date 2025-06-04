@@ -1,4 +1,4 @@
-proton-pass-bin-1.31.4.ebuild# @Author : XaetaCore
+# @Author : XaetaCore
 # Distributed under the terms of the GNU General Public License v2
 EAPI=8
 inherit desktop unpacker
