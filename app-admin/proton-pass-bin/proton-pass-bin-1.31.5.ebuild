@@ -5,7 +5,7 @@ inherit desktop unpacker
 
 DESCRIPTION="ProtonPass Free password manager with identity protection"
 HOMEPAGE="https://proton.me/pass"
-SRC_URI="https://proton.me/download/pass/linux/proton-pass_1.31.4_amd64.deb"
+SRC_URI="https://proton.me/download/pass/linux/proton-pass_1.31.5_amd64.deb"
 S="${WORKDIR}"
 LICENSE="GPL-3"
 SLOT="0"
@@ -19,7 +19,7 @@ DEPEND="x11-libs/gtk+:3
     x11-libs/libdrm
     x11-libs/libxcb
     dev-libs/glib:2"
-RDEPEND="${DEPEND}"https://relay.fedi.buzz/tag/cyberpunkhttps://relay.fedi.buzz/tag/cyberpunk
+RDEPEND="${DEPEND}"
 
 src_install() {
   # We skip /usr/share/doc
