@@ -3,4 +3,3 @@ games-emulation/emulationsstation-de 3.2.0-r2: ES-DE is a frontend for browsing 
 games-roguelike/brogue-ce 1.13-r2 1.14 1.14.1 1.14.1-r1 1.14.1-r2: A community fork of the much-loved minimalist roguelike game
 games-roguelike/infra-arcana 22.1.0: Infra Arcana is a Roguelike set in the early 20th century.
 games-util/linux-hunter 9999: Prototype MH:W companion app for Linux, inspired by SmartHunter.
-www-client/waterfox-bin 6.6.1: Fast and Private Web Browser
