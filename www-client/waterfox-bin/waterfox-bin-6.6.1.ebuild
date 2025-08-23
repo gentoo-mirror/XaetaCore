@@ -1,6 +1,7 @@
 # @Author : XaetaCore
 # Distributed under the terms of the GNU General Public License v2
 EAPI=8
+inherit desktop
 
 DESCRIPTION="
 Fast and Private Web Browser"
@@ -13,11 +14,12 @@ LICENSE="MPL-2.0 LGPL-2.1+ LGPL-3.0+ Apache-2.0 \
          ICU-67.1 V8-7.0 WebRTC-1.0 DirectXShaderCompiler-1.0 \
          nICEr"
 SLOT="0"
-KEYWORDS="amd64"
+KEYWORDS="~amd64"
 IUSE=""
 
 src_install() {
   mkdir -p ${D}/opt/waterfox || die "Failed to make opt dir for waterfox"
+  cp "${FILESDIR}/waterfox.png" "${D}/opt/waterfox/waterfox.png" || die "Install failed"
   cp -R "${S}/" "${D}/opt/" || die "Install failed!"
-  dosym /opt/waterfox/waterfox /usr/bin/waterfox 
+  make_desktop_entry /opt/waterfox/waterfox "waterfox" waterfox.png Internet
 }
